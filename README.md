@@ -7,13 +7,16 @@ This is a Next.js starter project with an opinionated tech stack, designed to he
 - **Next.js**: A React framework for production.
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
+- **Drizzle ORM**: TypeScript-first ORM with PostgreSQL support
+- **PostgreSQL**: Robust relational database system
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
 - **shadcn/ui**: A component library for building user interfaces with consistent design and functionality.
 
 ## Features
 
-- **Turbopack**: Enabled for faster development builds.
-- **PostCSS**: Integrated with Tailwind CSS for styling.
+- **Turbopack**: Enabled for faster development builds
+- **PostCSS**: Integrated with Tailwind CSS for styling
+- **Database**: Preconfigured Drizzle ORM with schema management
 
 ## Installation
 
@@ -23,6 +26,28 @@ To get started, clone the repository and install the dependencies:
 git clone [repository-url]
 cd next-starter
 bun install
+```
+
+## Database Setup
+
+1. Create a `.env` file with your database connection string:
+
+```bash
+DATABASE_URL="postgres://user:password@localhost:5432/mydb"
+```
+
+2. Define your database schema in `src/db/schema.ts`
+
+3. Generate migrations:
+
+```bash
+bun run generate
+```
+
+4. Run migrations:
+
+```bash
+bun run db:migrate
 ```
 
 ## Development
