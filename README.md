@@ -8,6 +8,7 @@ This is a Next.js starter project with an opinionated tech stack, designed to he
 - **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
+- **shadcn/ui**: A component library for building user interfaces with consistent design and functionality.
 
 ## Features
 
