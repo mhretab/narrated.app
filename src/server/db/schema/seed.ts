@@ -1,6 +1,6 @@
 import { pgTable, text } from 'drizzle-orm/pg-core';
 
-export const userTable = pgTable('user', {
+export const seed = pgTable('seed', {
   id: text('id').primaryKey(),
-  email: text('email').notNull().unique(),
+  name: text('name').notNull().unique(),
 });

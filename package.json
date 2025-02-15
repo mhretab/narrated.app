@@ -8,8 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "bun run ./db/migrate.ts",
-    "db:seed": "bun run ./db/seed.ts",
+    "db:migrate": "bun run ./src/server/db/migrate.ts",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -30,7 +29,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.4",
     "@types/pg": "^8.11.11",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
