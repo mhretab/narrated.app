@@ -1,6 +1,6 @@
 # Next.js Starter
 
-This is a Next.js starter project with an opinionated tech stack, designed to help you quickly set up a modern web application.
+This project is a comprehensive Next.js starter, meticulously crafted with an opinionated tech stack to provide a solid foundation for building modern, scalable, and maintainable web applications. It combines the power of Next.js with essential tools and libraries, streamlining your development workflow and enabling you to focus on building features that matter.
 
 ## Tech Stack
 
@@ -9,58 +9,95 @@ This is a Next.js starter project with an opinionated tech stack, designed to he
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
 - **Drizzle ORM**: TypeScript-first ORM with PostgreSQL support
 - **PostgreSQL**: Robust relational database system
+- **Zod**: Type-safe environment validation and schema definition
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
 - **shadcn/ui**: A component library for building user interfaces with consistent design and functionality.
 
 ## Features
 
-- **Turbopack**: Enabled for faster development builds
-- **PostCSS**: Integrated with Tailwind CSS for styling
-- **Database**: Preconfigured Drizzle ORM with schema management
+- **Rapid Development:** Leverages Next.js's features like Fast Refresh and Turbopack for an optimized development experience.
+- **Database Integration:** Preconfigured with Drizzle ORM for seamless database interactions, including schema management and migrations.
+- **Type Safety:** Utilizes TypeScript and Zod for enhanced type safety throughout the application, reducing runtime errors.
+- **Styling:** Integrates Tailwind CSS and PostCSS for efficient and customizable styling.
+- **Linting:** Includes ESLint for code quality and consistency.
+- **UI Components:** Comes with `shadcn/ui` for readily available, well-designed UI components.
+- **Environment Variable Management:** Uses dotenv, dotenv-expand, and Zod for type-safe environment variable validation.
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (LTS version recommended)
+- Bun (for package management)
+- PostgreSQL (database)
 
 ## Installation
 
-To get started, clone the repository and install the dependencies:
+1.  **Clone the repository:**
 
-```bash
-git clone [repository-url]
-cd next-starter
-bun install
-```
+    ```bash
+    git clone [repository-url]
+    cd next-starter
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    bun install
+    ```
 
 ## Database Setup
 
-1. Create a `.env` file with your database connection string:
+1.  **Create a `.env` file:**
 
-```bash
-DATABASE_URL="postgres://user:password@localhost:5432/mydb"
-```
+    Copy the `.env.example` file to a new file named `.env`:
 
-2. Define your database schema in `src/db/schema.ts`
+    ```bash
+    cp .env.example .env
+    ```
 
-3. Generate migrations:
+2.  **Configure environment variables:**
 
-```bash
-bun run generate
-```
+    Edit the `.env` file, setting your database connection details. You can either set the `DATABASE_URL` directly, or use the individual environment variables:
 
-4. Run migrations:
+    ```
+    DB_HOST=localhost
+    DB_USER=postgres
+    DB_PASSWORD=postgres
+    DB_NAME=blog
+    DB_PORT=5432
+    DATABASE_URL=postgresql://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}
+    ```
 
-```bash
-bun run db:migrate
-```
+    Replace the placeholder values with your actual database credentials. The `DATABASE_URL` is constructed from the other variables.
 
-## Development
+3.  **Define your database schema:**
 
-To start the development server, run:
+    Modify `src/server/db/schema/index.ts` to define your database schema using Drizzle ORM.
+
+4.  **Generate migrations:**
+
+    ```bash
+    bun run generate
+    ```
+
+5.  **Run migrations:**
+
+    ```bash
+    bun run db:migrate
+    ```
+
+## Usage
+
+### Development Server
+
+To start the development server with Turbopack enabled for faster builds, run:
 
 ```bash
 bun run dev
 ```
 
-This will start the server with Turbopack enabled for faster builds.
-
-## Building
+### Building for Production
 
 To build the project for production, use:
 
@@ -68,7 +105,7 @@ To build the project for production, use:
 bun run build
 ```
 
-## Starting
+### Starting the Production Server
 
 To start the production server, execute:
 
@@ -76,7 +113,7 @@ To start the production server, execute:
 bun run start
 ```
 
-## Linting
+### Linting
 
 To lint the codebase, run:
 
