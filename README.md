@@ -1,11 +1,23 @@
+<p align="center">
+  <img src="https://www.typescriptlang.org/icons/icon-48x48.png" alt="TypeScript" width="32" height="32" />
+  <img src="https://avatars.githubusercontent.com/u/126103961?s=200&v=4" alt="Next.js" width="32" height="32" />
+  <img src="https://avatars.githubusercontent.com/u/67109815?s=200&v=4" alt="Tailwind CSS" width="32" height="32" />
+  <img src="https://avatars.githubusercontent.com/u/139895814?s=200&v=4" alt="shadcn/ui" width="32" height="32" />
+  <img src="https://avatars.githubusercontent.com/u/108468352?v=4" alt="Drizzle ORM" width="32" height="32" />
+  <img src="https://www.postgresql.org/favicon.ico" alt="PostgreSQL" width="32" height="32" />
+  <img src="https://turbo.build/images/docs/pack/turbopack-hero-logo-dark.svg" alt="PostgreSQL" width="32" height="32" />
+  <img src="https://raw.githubusercontent.com/colinhacks/zod/refs/heads/main/logo.svg" alt="Zod" width="32" height="32" />
+  <img src="https://avatars.githubusercontent.com/u/163827765?s=200&v=4" alt="better-auth" width="32" height="32" />
+</p>
+
 # Next.js Starter
 
-This project is a comprehensive Next.js starter, meticulously crafted with an opinionated tech stack to provide a solid foundation for building modern, scalable, and maintainable web applications. It combines the power of Next.js with essential tools and libraries, streamlining your development workflow and enabling you to focus on building features that matter.
+A Next.js starter kit with a robust tech stack, designed for building modern, scalable web applications efficiently.
 
 ## Tech Stack
 
 - **Next.js**: A React framework for production.
-- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Tailwind CSS v4**: A utility-first CSS framework for rapid UI development.
 - **TypeScript**: A strongly typed programming language that builds on JavaScript.
 - **Drizzle ORM**: TypeScript-first ORM with PostgreSQL support
 - **PostgreSQL**: Robust relational database system
