@@ -11,6 +11,7 @@ const envSchema = z.object({
   DB_NAME: z.string().min(1),
   DB_PORT: z.coerce.number().min(1),
   DATABASE_URL: z.string().min(1),
+  BETTER_AUTH_SECRET: z.string().min(1),
 });
 
 export type Env = z.infer<typeof envSchema>;

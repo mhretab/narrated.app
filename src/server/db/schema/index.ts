@@ -1,1 +1,1 @@
-export { seed } from './seed';
+export { user, session, account, verification } from './auth-schema';

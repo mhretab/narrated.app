@@ -12,6 +12,7 @@ This project is a comprehensive Next.js starter, meticulously crafted with an op
 - **Zod**: Type-safe environment validation and schema definition
 - **ESLint**: A tool for identifying and fixing problems in JavaScript code.
 - **shadcn/ui**: A component library for building user interfaces with consistent design and functionality.
+- **better-auth**: A library for simplified and secure authentication.
 
 ## Features
 
@@ -86,6 +87,20 @@ Before you begin, ensure you have the following installed:
     ```bash
     bun run db:migrate
     ```
+
+## Authentication
+
+This project uses the `better-auth` library for authentication, providing both client-side and server-side utilities.
+
+1.  **Environment Variables:** Set `BETTER_AUTH_URL` (your app's base URL) and `BETTER_AUTH_SECRET` (a secret key) in your `.env` file.
+
+2.  **Database Schema:** The authentication schema is in `src/server/db/schema/auth-schema.ts`. Run migrations after setting up your database.
+
+3.  **Client-Side:** `src/lib/auth-client.ts` exports `signIn`, `signUp`, and `useSession` from `better-auth/react` for use in your components.
+
+4.  **Server-Side:** `src/server/auth.ts` configures server-side authentication with `better-auth` and `drizzleAdapter`, connecting to the PostgreSQL database.
+
+5.  **API Routes:** `src/app/api/auth/[...all]/route.ts` handles authentication API requests using `better-auth/next-js`.
 
 ## Usage
 
