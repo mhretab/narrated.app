@@ -1,5 +1,6 @@
 import { betterAuth } from 'better-auth';
 import { drizzleAdapter } from 'better-auth/adapters/drizzle';
+import { admin, organization } from 'better-auth/plugins';
 import { db } from '@/server/db';
 import { sendEmail } from '@/actions/email';
 import clientEnv from '@/lib/client-env';
@@ -31,6 +32,7 @@ export const auth = betterAuth({
       });
     },
   },
+  plugins: [admin(), organization()],
 });
 
 export type Session = typeof auth.$Infer.Session;
