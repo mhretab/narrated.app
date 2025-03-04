@@ -1,4 +1,6 @@
-import { object, string } from 'zod';
+import { object, string, z } from 'zod';
+import { createInsertSchema } from 'drizzle-zod';
+import { user } from './better-auth';
 
 const getPasswordSchema = (type: 'password' | 'confirmPassword') =>
   string({ required_error: `Please enter your ${type}` })
@@ -44,3 +46,7 @@ export const resetPasswordSchema = object({
   message: 'Passwords do not match',
   path: ['confirmPassword'],
 });
+
+//eslint-disable-next-line @typescript-eslint/no-unused-vars
+const userSchema = createInsertSchema(user);
+export type User = z.infer<typeof userSchema>;
