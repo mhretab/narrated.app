@@ -104,7 +104,7 @@ Before you begin, ensure you have the following installed:
 
 This project uses the `better-auth` library for authentication, providing both client-side and server-side utilities.
 
-1.  **Environment Variables:** Set `BETTER_AUTH_URL` (your app's base URL) and `BETTER_AUTH_SECRET` (a secret key) in your `.env` file.
+1.  **Environment Variables:** Set `NEXT_PUBLIC_BETTER_AUTH_URL` (your app's base URL) and `BETTER_AUTH_SECRET` (a secret key) in your `.env` file.
 
 2.  **Database Schema:** The authentication schema is in `src/server/db/schema/auth-schema.ts`. Run migrations after setting up your database.
 

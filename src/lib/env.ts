@@ -12,6 +12,9 @@ const envSchema = z.object({
   DB_PORT: z.coerce.number().min(1),
   DATABASE_URL: z.string().min(1),
   BETTER_AUTH_SECRET: z.string().min(1),
+  SENDGRID_API_KEY: z.string().min(1),
+  EMAIL_FROM: z.string().min(1).email(),
+  EMAIL_VERIFICATION_CALLBACK_URL: z.string().min(1).url(),
 });
 
 export type Env = z.infer<typeof envSchema>;
