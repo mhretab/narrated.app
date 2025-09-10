@@ -26,6 +26,12 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  experimental: {
+    optimizeCss: true,
+  },
+  serverExternalPackages: [],
+  typedRoutes: true
 };
+
 
 export default nextConfig;

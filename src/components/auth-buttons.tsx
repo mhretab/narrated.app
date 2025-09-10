@@ -13,10 +13,10 @@ export default function AuthButtons() {
 
   return !user ? (
     <div className="flex gap-2 justify-center">
-      <Link href="/sign-in">
+      <Link href="/sign-in" legacyBehavior>
         <Button>Sign In</Button>
       </Link>
-      <Link href="/sign-up">
+      <Link href="/sign-up" legacyBehavior>
         <Button>Sign Up</Button>
       </Link>
     </div>

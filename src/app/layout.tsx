@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Next.js starter",
-  description: "A starter template for Next.js with Tailwind CSS v4",
+  description: "A starter template for Next.js with Tailwind CSS v4"
 };
 
 export default function RootLayout({
